@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            NeurovantOS
+        </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="desktop">
+            <div class="desktop-icon" onclick="openWindow('notesWindow')">
+                📝
+                <p>
+                    Notes
+                </p>
+            </div>
+            <div class="desktop-icon" onclick="openWindow('calculatorWindow')">
+                🧮
+                <p>
+                    Calculator
+                </p>    
+            </div>
+            <div class="desktop-icon" onclick="openWindow('settingsWindow')">
+                ⚙️
+                <p>
+                    Settings
+                </p>
+            </div>
+        </div>
+        <div class="desktop-icon" onclick="openWindow('fileWindow')">
+            📁
+            <p>
+                Files
+            </p>
+        </div>
+
+        <div id="notesWindow" class="window">
+            <div class="title-bar">
+                Notes
+                <button onclick="closeWindow('notesWindow')">✕</button>
+            </div>
+            <textarea id="notesArea"></textarea>
+        </div>
+
+
+        <div id="calculatorWindow" class="window">
+            <div class="title-bar">
+                Calculator
+                <button onclick="closeWindow('calculatorWindow')">✕</button>
+            </div>
+            <input id="calculatorDisplay" type="text">
+            <button onclick="calculate()">=</button>
+        </div>
+
+
+        <div id="settingsWindow" class="window">
+            <div class="title-bar">
+                Settings
+                <button onclick="closeWindow('settingsWindow')">✕</button>
+            </div>
+            <button onclick="setWallpaper('#1e3a8a')">Blue Theme</button>
+            <button onclick="setWallpaper('#064e3b')">Green Theme</button>
+        </div>
+        <div id="fileWindow" class="window">
+            
+        </div>
+
+        <div id="taskbar">
+            <button onclick="toggleStartMenu()">⊞ Start</button>
+            <div id="clock">
+
+            </div>
+        </div>
+
+
+        <div id="startMenu">
+            <h3>
+                NeurovantOS
+            </h3>
+            <button onclick="openWindow('notesWindow')">Notes</button>
+            <button onclick="openWindow('calculatorWindow')">Calculator</button>
+            <button onclick="openWindow('settingsWindow')">Settings</button>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
